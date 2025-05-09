@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Terms & Conditions - Quillmate 2.0</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .glass {
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-purple-900 via-purple-700 to-purple-900 text-white min-h-screen flex flex-col">
+
+  <!-- Navigation -->
+  <nav class="flex justify-between items-center px-8 py-6 relative z-10">
+    <div class="text-3xl font-bold flex items-center gap-2">
+      <img src="assets/logo2.png" alt="logo" class="w-10 h-10 rounded-full">
+      <span>Quillmate 2.0</span>
+    </div>
+    <div class="hidden md:flex space-x-6 text-sm font-medium text-white/80">
+      <a href="services.html" class="hover:text-white">Services</a>
+      <a href="howitworks.html" class="hover:text-white">How it Works</a>
+      <a href="order.html" class="hover:text-white">Order</a>
+      <a href="contact.html" class="hover:text-white">Contact</a>
+      <a href="privacy.html" class="hover:text-white">Privacy</a>
+      <a href="terms.html" class="hover:text-white font-bold">Terms</a>
+    </div>
+    <button id="menuToggle" class="md:hidden text-white focus:outline-none">☰</button>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" class="hidden md:hidden px-8 pb-4 space-y-2 text-white/80 relative z-10">
+    <a href="services.html" class="block">Services</a>
+    <a href="howitworks.html" class="block">How it Works</a>
+    <a href="order.html" class="block">Order</a>
+    <a href="contact.html" class="block">Contact</a>
+    <a href="privacy.html" class="block">Privacy</a>
+    <a href="terms.html" class="block font-bold">Terms</a>
+  </div>
+
+  <!-- Terms Content -->
+  <section class="flex-grow px-6 py-12 max-w-4xl mx-auto">
+    <div class="glass p-8 rounded-xl shadow-lg">
+      <h1 class="text-4xl font-bold mb-6 text-center">Terms & Conditions</h1>
+
+      <p class="text-white/80 mb-4">
+        By using Quillmate 2.0's services, you agree to the following terms and conditions. Please read them carefully before placing an order.
+      </p>
+
+      <h2 class="text-2xl font-semibold mt-6 mb-2">1. Services</h2>
+      <p class="text-white/80 mb-2">
+        Quillmate 2.0 provides writing assistance for academic assignments, class notes, record work, and more. The content delivered is customized based on the user's input and uploaded documents.
+      </p>
+
+      <h2 class="text-2xl font-semibold mt-6 mb-2">2. Payment & Refunds</h2>
+      <ul class="list-disc list-inside text-white/80 space-y-1">
+        <li>All payments must be completed via UPI before order processing begins.</li>
+        <li>Once an order is accepted and processed, no refunds will be issued unless the order cannot be fulfilled by our team.</li>
+      </ul>
+
+      <h2 class="text-2xl font-semibold mt-6 mb-2">3. User Responsibilities</h2>
+      <ul class="list-disc list-inside text-white/80 space-y-1">
+        <li>You agree to provide accurate and complete order details and contact information.</li>
+        <li>You must not use our services for any illegal or unethical activities, including plagiarism.</li>
+      </ul>
+
+      <h2 class="text-2xl font-semibold mt-6 mb-2">4. Intellectual Property</h2>
+      <p class="text-white/80 mb-2">
+        All content delivered by Quillmate 2.0 is for personal and educational use only. You may not reproduce, sell, or distribute the content without permission.
+      </p>
+
+      <h2 class="text-2xl font-semibold mt-6 mb-2">5. Privacy</h2>
+      <p class="text-white/80 mb-2">
+        We respect your privacy. Please refer to our <a href="privacy.html" class="underline text-white">Privacy Policy</a> for how we collect and use your data.
+      </p>
+
+      <h2 class="text-2xl font-semibold mt-6 mb-2">6. Changes to Terms</h2>
+      <p class="text-white/80 mb-2">
+        We reserve the right to update these terms at any time. Changes will be reflected on this page and your continued use of the service implies acceptance.
+      </p>
+
+      <h2 class="text-2xl font-semibold mt-6 mb-2">7. Contact</h2>
+      <p class="text-white/80">
+        For questions or concerns about these terms, contact us at <a href="mailto:quillmatee@gmail.com" class="underline text-white">quillmatee@gmail.com</a>.
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-purple-950 text-white/70 text-sm px-8 py-6 mt-auto">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+      <div>&copy; 2025 Quillmate 2.0. All rights reserved.</div>
+      <div class="space-x-4">
+        <a href="mailto:quillmatee@gmail.com" class="hover:text-white">contact: quillmatee@gmail.com</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("menuToggle").addEventListener("click", () => {
+      const menu = document.getElementById("mobileMenu");
+      menu.classList.toggle("hidden");
+    });
+  </script>
+</body>
+</html>

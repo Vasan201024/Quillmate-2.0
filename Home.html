@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Quillmate 2.0</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .glass {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-purple-900 via-purple-700 to-purple-900 text-white min-h-screen flex flex-col justify-between">
+
+  <!-- Background Image -->
+  <div class="absolute inset-0 bg-cover bg-center opacity-20 z-0" style="background-image: url('https://images.unsplash.com/photo-1519682337058-a94d519337bc');"></div>
+
+  <!-- Navigation -->
+  <nav class="flex justify-between items-center px-8 py-6 z-10 relative">
+    <!-- Logo -->
+    <div class="text-3xl font-bold flex items-center gap-2">
+      <img src="assets/logo2.png" alt="logo" class="w-10 h-10 rounded-full">
+      <span>Quillmate 2.0</span>
+    </div>
+
+    <!-- Desktop Menu -->
+    <div class="hidden md:flex space-x-6 text-sm font-medium text-white/80">
+      <a href="services.html" class="hover:text-white">Services</a>
+      <a href="howitworks.html" class="hover:text-white">How it Works</a>
+      <a href="order.html" class="hover:text-white">Order</a>
+      <a href="contact.html" class="hover:text-white">Contact</a>
+      <a href="privacy.html" class="hover:text-white">Privacy Policy</a>
+        <a href="terms.html" class="hover:text-white">Terms</a>
+    </div>
+
+    <!-- Mobile Menu Button -->
+    <button id="menuToggle" class="md:hidden text-white focus:outline-none">
+      ☰
+    </button>
+  </nav>
+
+  <!-- Mobile Dropdown -->
+  <div id="mobileMenu" class="hidden md:hidden px-8 pb-4 space-y-2 text-white/80 z-10 relative">
+    <a href="services.html" class="block">Services</a>
+    <a href="howitworks.html" class="block">How it Works</a>
+    <a href="order.html" class="block">Order</a>
+    <a href="contact.html" class="block">Contact</a>
+    <a href="privacy.html" class="hover:text-white">Privacy Policy</a>
+        <a href="terms.html" class="hover:text-white">Terms</a>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="flex flex-col items-center justify-center text-center min-h-[80vh] px-6 z-10 relative">
+    <div class="glass p-10 rounded-xl max-w-2xl mx-auto shadow-lg" data-aos="zoom-in">
+      <h1 class="text-4xl md:text-6xl font-bold mb-4">We Write. You Shine.</h1>
+      <p class="text-lg md:text-xl text-white/80 mb-6">
+        Elevate your academic success with our premium writing services — fast, flawless, and tailored just for you.
+      </p>
+      <a href="order.html" class="inline-block bg-white text-purple-800 font-semibold px-6 py-3 rounded-full shadow-lg hover:bg-purple-200 transition-all">
+        Get Started
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact" class="bg-purple-950 text-white/70 text-sm px-8 py-6">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+      <div>&copy; 2025 Quillmate 2.0. All rights reserved.</div>
+      <div class="space-x-4">
+        <a href="mailto:contact@quillmate.com" class="hover:text-white">contact:quillmatee@gmail.com</a>
+        
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    menuToggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+
+</body>
+</html>

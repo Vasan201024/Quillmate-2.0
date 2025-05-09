@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Order - Quillmate 2.0</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .glass {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    .calculator {
+      border: 2px solid white;
+      background-color: rgba(255, 255, 255, 0.2);
+      padding: 1.5rem;
+      border-radius: 1rem;
+      color: white;
+      font-weight: 500;
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-purple-900 via-purple-700 to-purple-900 text-white min-h-screen flex flex-col">
+
+  <!-- Navigation -->
+  <nav class="flex justify-between items-center px-8 py-6 relative z-10">
+    <div class="text-3xl font-bold flex items-center gap-2">
+      <img src="assets/logo2.png" alt="logo" class="w-10 h-10 rounded-full">
+      <span>Quillmate 2.0</span>
+    </div>
+    <div class="hidden md:flex space-x-6 text-sm font-medium text-white/80">
+      <a href="services.html" class="hover:text-white">Services</a>
+      <a href="howitworks.html" class="hover:text-white">How it Works</a>
+      <a href="order.html" class="hover:text-white">Order</a>
+      <a href="#contact" class="hover:text-white">Contact</a>
+    </div>
+    <button id="menuToggle" class="md:hidden text-white focus:outline-none">☰</button>
+  </nav>
+
+  <!-- Mobile Dropdown -->
+  <div id="mobileMenu" class="hidden md:hidden px-8 pb-4 space-y-2 text-white/80 relative z-10">
+    <a href="services.html" class="block">Services</a>
+    <a href="howitworks.html" class="block">How it Works</a>
+    <a href="order.html" class="block">Order</a>
+    <a href="#contact" class="block">Contact</a>
+  </div>
+
+  <!-- Hero -->
+  <section class="text-center px-6 py-12 z-10 relative">
+    <div class="glass p-10 rounded-xl max-w-2xl mx-auto shadow-lg">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">Place Your Order</h1>
+      <p class="text-lg md:text-xl text-white/80">Get your writing done fast, neat, and custom-tailored just for you.</p>
+    </div>
+  </section>
+
+  <!-- FORM SECTION START -->
+  <section class="px-4 md:px-20 py-10 flex flex-col md:flex-row gap-10">
+    <form id="orderForm" action="https://formspree.io/f/mkgrjrnw" method="POST" class="flex-1 space-y-6">
+      <div>
+        <label class="block mb-2">payment option. Any UPI: 7708246122</label>
+        <select name="payment_option" id="payment_option" class="w-full p-3 rounded-lg bg-purple-800 text-white" required>
+          <option value="">-- Select --</option>
+          <option value="phonepe">Phonepe</option>
+          <option value="gpay">gpay</option>
+          <option value="paytm">paytm</option>
+          <option value="other_upi">other upi</option>
+        </select>
+      </div>
+      
+      <div>
+        <label class="block mb-2">Name</label>
+        <input name="name" type="text" class="w-full p-3 rounded-lg bg-purple-800 text-white" required>
+      </div>
+
+      <div>
+        <label class="block mb-2">Address</label>
+        <input name="address" type="text" class="w-full p-3 rounded-lg bg-purple-800 text-white" required>
+      </div>
+
+      <div>
+        <label class="block mb-2">Contact Number</label>
+        <input name="contact" type="tel" class="w-full p-3 rounded-lg bg-purple-800 text-white" required>
+      </div>
+
+      <div>
+        <label class="block mb-2">Email</label>
+        <input name="email" type="email" class="w-full p-3 rounded-lg bg-purple-800 text-white" required>
+      </div>
+
+      <div>
+        <label class="block mb-2">Transaction ID (once you pay the total amount to the QR enter the transaction id)</label>
+        <input name="transaction_id" type="text" class="w-full p-3 rounded-lg bg-purple-800 text-white" required>
+      </div>
+
+      <div>
+        <label class="block mb-2">Upload Files</label>
+        <a href="https://www.dropbox.com/request/BEnDCVH2JFwLCAlorp6T" target="_blank"
+           class="inline-block bg-white text-purple-800 font-semibold px-6 py-3 rounded-full shadow-lg hover:bg-purple-200 transition-all">
+          Upload via Dropbox
+        </a>
+      </div>
+
+      <div>
+        <label class="block mb-2">Select Service</label>
+        <select name="service_type" id="serviceType" class="w-full p-3 rounded-lg bg-purple-800 text-white" required>
+          <option value="">-- Select --</option>
+          <option value="assignment">Assignment (₹1.5/page)</option>
+          <option value="record">Record (₹300/note)</option>
+          <option value="classwork">Class Work (₹1/page)</option>
+          <option value="custom">Custom</option>
+        </select>
+      </div>
+
+      <div id="pagesInput" class="hidden">
+        <label class="block mb-2">Total Number of Pages</label>
+        <input name="total_pages" type="number" id="totalPages" class="w-full p-3 rounded-lg bg-purple-800 text-white">
+      </div>
+
+      <div id="coverOption" class="hidden">
+        <label class="block mb-2">Need Brown Sheet?</label>
+        <select name="need_brown_sheet" id="needCover" class="w-full p-3 rounded-lg bg-purple-800 text-white">
+          <option value="no">No</option>
+          <option value="yes">Yes (+₹30)</option>
+        </select>
+      </div>
+
+      <div id="customDesc" class="hidden">
+        <label class="block mb-2">Describe Your Work</label>
+        <textarea name="custom_description" class="w-full p-3 rounded-lg bg-purple-800 text-white" rows="4"></textarea>
+      </div>
+
+      <div>
+        <label class="block mb-2">Delivery Type</label>
+        <select name="delivery_type" id="deliveryType" class="w-full p-3 rounded-lg bg-purple-800 text-white">
+          <option value="">-- Select --</option>
+          <option value="basic">Basic (+₹100)</option>
+          <option value="adorable">Adorable (+₹200)</option>
+          <option value="premium">Premium (+₹250)</option>
+        </select>
+      </div>
+
+      <div>
+        <img src="assets/qr.jpg" alt="logo" class="max-w-[200px] max-h-[200px]">
+
+
+      </div>
+      <!-- Calculator (Mobile View) -->
+      <div class="md:hidden">
+        <div class="calculator mt-6">
+          <h2 class="text-xl font-bold mb-2">Total Estimated Cost</h2>
+          <p id="costOutput" class="text-2xl">₹0</p>
+        </div>
+      </div>
+
+      <input type="hidden" name="estimated_cost" id="hiddenCost">
+
+      <button type="submit" class="bg-white text-purple-800 font-bold px-6 py-3 rounded-full shadow-lg hover:bg-purple-200 transition-all mt-4">
+        Submit Order
+      </button>
+    </form>
+
+    <!-- Calculator (Desktop View) -->
+    <div class="hidden md:block w-full md:w-1/3">
+      <div class="calculator sticky top-24">
+        <h2 class="text-xl font-bold mb-2">Total Estimated Cost</h2>
+        <p id="costOutputDesktop" class="text-3xl">₹0</p>
+      </div>
+    </div>
+  </section>
+
+  <footer id="contact" class="bg-purple-950 text-white/70 text-sm px-8 py-6 mt-auto">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+      <div>&copy; 2025 Quillmate 2.0. All rights reserved.</div>
+      <div class="space-x-4">
+        <a href="mailto:quillmatee@gmail.com" class="hover:text-white">contact: quillmatee@gmail.com</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const serviceType = document.getElementById('serviceType');
+    const totalPages = document.getElementById('totalPages');
+    const needCover = document.getElementById('needCover');
+    const deliveryType = document.getElementById('deliveryType');
+    const costOutput = document.getElementById('costOutput');
+    const costOutputDesktop = document.getElementById('costOutputDesktop');
+
+    const pagesInput = document.getElementById('pagesInput');
+    const coverOption = document.getElementById('coverOption');
+    const customDesc = document.getElementById('customDesc');
+
+    function calculateCost() {
+      let cost = 0;
+      const service = serviceType.value;
+      const delivery = deliveryType.value;
+      const pages = parseInt(totalPages.value) || 0;
+      const cover = needCover.value;
+
+      if (service === 'assignment') cost += pages * 1.5;
+      if (service === 'record') cost += 300;
+      if (service === 'classwork') cost += pages * 1;
+      if (cover === 'yes') cost += 30;
+
+      if (delivery === 'basic') cost += 100;
+      if (delivery === 'adorable') cost += 200;
+      if (delivery === 'premium') cost += 250;
+
+      costOutput.textContent = `₹${cost}`;
+      costOutputDesktop.textContent = `₹${cost}`;
+      document.getElementById('hiddenCost').value = cost;
+    }
+
+    serviceType.addEventListener('change', () => {
+      pagesInput.classList.toggle('hidden', !['assignment', 'classwork'].includes(serviceType.value));
+      coverOption.classList.toggle('hidden', serviceType.value !== 'record');
+      customDesc.classList.toggle('hidden', serviceType.value !== 'custom');
+      calculateCost();
+    });
+
+    [totalPages, deliveryType, needCover].forEach(input =>
+      input.addEventListener('input', calculateCost)
+    );
+  </script>
+
+</body>
+</html>

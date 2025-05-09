@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Privacy Policy - Quillmate 2.0</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .glass {
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-purple-900 via-purple-700 to-purple-900 text-white min-h-screen flex flex-col">
+
+  <!-- Navigation -->
+  <nav class="flex justify-between items-center px-8 py-6 relative z-10">
+    <div class="text-3xl font-bold flex items-center gap-2">
+      <img src="assets/logo2.png" alt="logo" class="w-10 h-10 rounded-full">
+      <span>Quillmate 2.0</span>
+    </div>
+    <div class="hidden md:flex space-x-6 text-sm font-medium text-white/80">
+      <a href="services.html" class="hover:text-white">Services</a>
+      <a href="howitworks.html" class="hover:text-white">How it Works</a>
+      <a href="order.html" class="hover:text-white">Order</a>
+      <a href="contact.html" class="hover:text-white">Contact</a>
+      <a href="privacy.html" class="hover:text-white font-bold">Privacy</a>
+    </div>
+    <button id="menuToggle" class="md:hidden text-white focus:outline-none">☰</button>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" class="hidden md:hidden px-8 pb-4 space-y-2 text-white/80 relative z-10">
+    <a href="services.html" class="block">Services</a>
+    <a href="howitworks.html" class="block">How it Works</a>
+    <a href="order.html" class="block">Order</a>
+    <a href="contact.html" class="block">Contact</a>
+    <a href="privacy.html" class="block font-bold">Privacy</a>
+  </div>
+
+  <!-- Privacy Content -->
+  <section class="flex-grow px-6 py-12 max-w-4xl mx-auto">
+    <div class="glass p-8 rounded-xl shadow-lg">
+      <h1 class="text-4xl font-bold mb-6 text-center">Privacy Policy</h1>
+      <p class="mb-4 text-white/80">
+        At Quillmate 2.0, your privacy is extremely important to us. This policy outlines how we collect, use, and protect your personal information when you use our services.
+      </p>
+
+      <h2 class="text-2xl font-semibold mt-6 mb-2">1. Information We Collect</h2>
+      <ul class="list-disc list-inside text-white/80 space-y-1">
+        <li>Your name, email, and contact number when you place an order or contact us</li>
+        <li>Order-specific details like service type, delivery method, and uploaded files</li>
+        <li>Payment reference (Transaction ID) for verification</li>
+      </ul>
+
+      <h2 class="text-2xl font-semibold mt-6 mb-2">2. How We Use Your Information</h2>
+      <ul class="list-disc list-inside text-white/80 space-y-1">
+        <li>To process and fulfill your writing service orders</li>
+        <li>To respond to customer support inquiries</li>
+        <li>To send order-related communication</li>
+      </ul>
+
+      <h2 class="text-2xl font-semibold mt-6 mb-2">3. Sharing of Information</h2>
+      <p class="text-white/80 mb-2">
+        We do not share your personal data with any third-party services or advertisers. Your details are used solely within Quillmate for service fulfillment.
+      </p>
+
+      <h2 class="text-2xl font-semibold mt-6 mb-2">4. Data Security</h2>
+      <p class="text-white/80 mb-2">
+        We implement security measures to protect your data. All submissions are securely sent via Formsphere, and files are uploaded through Dropbox File Request, ensuring end-to-end encryption.
+      </p>
+
+      <h2 class="text-2xl font-semibold mt-6 mb-2">5. Your Consent</h2>
+      <p class="text-white/80 mb-2">
+        By using our website and submitting information through our forms, you consent to our privacy policy.
+      </p>
+
+      <h2 class="text-2xl font-semibold mt-6 mb-2">6. Updates</h2>
+      <p class="text-white/80 mb-2">
+        This policy may be updated from time to time. Any changes will be reflected on this page.
+      </p>
+
+      <h2 class="text-2xl font-semibold mt-6 mb-2">7. Contact Us</h2>
+      <p class="text-white/80">
+        For questions regarding your data or this policy, please email us at: <a href="mailto:quillmatee@gmail.com" class="underline text-white">quillmatee@gmail.com</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-purple-950 text-white/70 text-sm px-8 py-6 mt-auto">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+      <div>&copy; 2025 Quillmate 2.0. All rights reserved.</div>
+      <div class="space-x-4">
+        <a href="mailto:quillmatee@gmail.com" class="hover:text-white">contact: quillmatee@gmail.com</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("menuToggle").addEventListener("click", () => {
+      const menu = document.getElementById("mobileMenu");
+      menu.classList.toggle("hidden");
+    });
+  </script>
+</body>
+</html>
